@@ -18,8 +18,8 @@ interface MenuItem {
   openInNewTab?: boolean;
 }
 const menuItems: MenuItem[] = [
-  { name: "Blog", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "任务面板", href: "/" },
+  { name: "关于我们", href: "/about" },
 ];
 export const Navigation: FunctionComponent = () => {
   const pathname = usePathname();
