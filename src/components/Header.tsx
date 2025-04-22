@@ -12,6 +12,7 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FunctionComponent } from "react";
+import { DarkModeToggle } from "./DarkModeToggle";
 interface MenuItem {
   name: string;
   href: string;
@@ -19,6 +20,7 @@ interface MenuItem {
 }
 const menuItems: MenuItem[] = [
   { name: "任务面板", href: "/" },
+  { name: "工具平台", href: "https://aigc.fizzdragon.com", openInNewTab: true },
   { name: "关于我们", href: "/about" },
 ];
 export const Navigation: FunctionComponent = () => {
@@ -81,6 +83,7 @@ export const Header: FunctionComponent = () => {
         </h1>
       </Link>
       <Navigation />
+      <DarkModeToggle />
     </section>
   );
 };

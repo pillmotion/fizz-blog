@@ -5,21 +5,13 @@ import Link from "next/link";
 import { FunctionComponent } from "react";
 import { DarkModeToggle } from "./DarkModeToggle";
 import { Button } from "./ui/button";
-
+import Image from "next/image";
 export const Footer: FunctionComponent = () => {
   return (
     <section className="mt-8 md:mt-16 mb-12">
-      <div className="flex items-center justify-between">
-        <div className="text-sm text-muted-foreground">
-          © {config.blog.copyright} {new Date().getFullYear()}
-        </div>
+      <div className="flex items-center justify-center">
         <div>
-          <Link href="/rss">
-            <Button variant="ghost" className="p-2">
-              <Rss className="w-4 h-4" />
-            </Button>
-          </Link>
-          <DarkModeToggle />
+          <Image src="/images/fizzdragon-logo.png" alt="logo" width={600} height={200} />
         </div>
       </div>
     </section>
